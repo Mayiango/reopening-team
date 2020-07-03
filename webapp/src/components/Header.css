@@ -1,0 +1,16 @@
+.list-item{
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer
+}
+
+h1{
+    text-align: center;
+    position: relative;
+    background-color: gray;
+}
+
+nav{
+    font-size: medium;
+    background-color: gray;
+}
