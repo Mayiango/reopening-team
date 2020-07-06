@@ -1,4 +1,21 @@
-.list-item{
+
+.Title{
+    height: 120px;
+}
+
+.nav-bar{
+    margin: auto;
+    height:20px;
+    text-align-last: center; 
+}
+
+.Introduction{
+    width: 90%;
+    height: 500px;
+}
+
+
+list-item{
     display: flex !important;
     align-items: center !important;
     cursor: pointer
@@ -10,7 +27,3 @@ h1{
     background-color: gray;
 }
 
-nav{
-    font-size: medium;
-    background-color: gray;
-}
