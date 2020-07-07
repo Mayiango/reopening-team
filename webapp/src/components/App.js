@@ -6,8 +6,9 @@ import ListDetail from './ListDetail';
 import Search from './Search';
 import { BrowserRouter,  Route } from 'react-router-dom';
 import Header from './Header';
+import Body from './Body';
 
-
+//reference: https://reactrouter.com/web/example/basic
 
 class App extends React.Component{
     state = {todos: [], selectItem: null};
@@ -38,20 +39,12 @@ class App extends React.Component{
     render(){
         return (
           <div className="ui container" style={{marginTop: '10px'}}>
-            <div> 
+            <div className="Header"> 
               <h1><Header /></h1>
             </div>
-            <div className="body-content">
-              <h3>
-                <p>
-                  Due to CoV19, different cout4ries has their own reopen policy
-                </p>
-              </h3>
-            </div>
+            <div className="Body"><Body /></div>
             <div className="footer">
-              <footer>
-
-              </footer>
+              <h6 className="footer">IBM Summer Project 2020</h6>
             </div>
           </div>
         );
