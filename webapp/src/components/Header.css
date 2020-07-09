@@ -1,0 +1,29 @@
+
+.Title{
+    height: 120px;
+}
+
+.nav-bar{
+    margin: auto;
+    height:20px;
+    text-align-last: center; 
+}
+
+.Introduction{
+    width: 90%;
+    height: 500px;
+}
+
+
+list-item{
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer
+}
+
+h1{
+    text-align: center;
+    position: relative;
+    background-color: gray;
+}
+

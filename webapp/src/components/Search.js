@@ -3,14 +3,9 @@ import api from '../API/api';
 import SearchBar from './SearchBar';
 import ResultsList from './ResultsList';
 import ListDetail from './ListDetail';
-import Search from './Search';
-import { BrowserRouter,  Route } from 'react-router-dom';
-import Header from './Header';
-import Body from './Body';
 
-//reference: https://reactrouter.com/web/example/basic
 
-class App extends React.Component{
+class Search extends React.Component{
     state = {todos: [], selectItem: null};
 
     componentDidMount(){
@@ -39,17 +34,13 @@ class App extends React.Component{
     render(){
         return (
           <div className="ui container" style={{marginTop: '10px'}}>
-            <div className="Header"> 
-              <h1><Header /></h1>
-            </div>
-            <div className="Body"><Body /></div>
-            <div className="footer">
-              <h6 className="footer">IBM Summer Project 2020</h6>
-            </div>
+            <SearchBar  onFormSubmit={this.onTermSubmit} />
+            <ListDetail todo={this.state.selectItem} />
+            <ResultsList onSelect={this.onSelect} todos={this.state.todos} />
           </div>
         );
     }
 }
 
-export default App;
+export default Search;
 
