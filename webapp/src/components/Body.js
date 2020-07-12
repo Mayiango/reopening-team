@@ -1,54 +1,39 @@
 import React from 'react';
-import './Header.css';
-import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import './Body.css';
+import {NavLink, BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import SearchPage from './SearchPage';
 import Chatbox from './Chatbox';
-//import ReactBootstrap, {Nav, Navbar, NavDropdown, MenuItem,  Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, Form, FormGroup, FormControl}  from 'react-bootstrap';
+import ReactBootstrap, {Nav, Navbar, NavItem, selectKey, NavDropdown, MenuItem,  Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, Form, FormGroup, FormControl}  from 'react-bootstrap';
 
+import SignIn from './SignIn';
+import SignUp from './SignUp';
+import About from './About';
 
 const Body = () =>{
 
     return (    
         <Router>
-            <div className="nav-bar">
-                <Link to="/about" className="item" style={{padding: '10px' }}> About </Link>
-                <Link to="/chatbox" className="item" style={{padding: '10px' }}>Chatbox </Link>
-                <Link to="/search" className="item" style={{padding: '10px' }} >Search</Link>
-                <Link to="/signin" className="item" style={{padding: '10px' }} >Sign In</Link>
-            
+            <div className="Header" >
+                <h1 style={{padding: '40px'}}>
+                     WorldWide CoV19 Reopen Policy
+                </h1>
             </div>
-            <div className="Introduction">
+            <Navbar >
+                <Link to="/about" style={{margin: '10px'}} >About </Link>
+                <Link to="/chatbot" style={{margin: '10px'}}>Chatbot</Link>
+                <Link to="/search" style={{margin: '10px'}}>Search</Link>
+                <Link to="/signin" style={{margin: '10px'}}>Sign In</Link>
+                <Link to="/signup" style={{margin: '10px'}}>Sign Up</Link>
+            </Navbar>
                 
-                <p>
-                    Human Coronavirus Type 
-                </p>
-                <p>
-                    Coronaviruses include a group of RNA viruses that can cause diseases in mammals and birds. 
-                </p>
-                <p>
-                    Coronaviruses are large, roughly spherical, particles with crown like spikes proteins on their surface. 
-                    There are four main subgroups of coronavirus known as alpha, beta, gamma and delta.
-                    Human coronaviruses including the novel coronavirus - CoV19 all are alphacoronavirus. 
-                </p>           
-                <p>
-                    With the widespread of CoV19 worldwide,all countries have their own travel policies during this pandemic. 
-                    Due to the vairation of spread in each country, all states or province of the countries may have different 
-                    travel polices. 
-                </p>
-                <p>
-                    To facilitate of travel policy search, we started this project to pull all travel policy together.
-                </p>
-                <p>
-                    Be safe!     
-                </p>  
-            </div>
             <Switch>
-                <Route path="chatbox">
+                <Route path="/about" component={About }></Route>
+                <Route path="/chatbox">
                     Chatbox
                 </Route>
-                <Route path="/search">
-                    <SearchPage />
-                </Route>
+                <Route path="/search" component={SearchPage} />
+                <Route path="/signin" component={SignIn} />
+                <Route path="/signup" component={SignUp} />
             </Switch>
         </Router>
                   
@@ -65,3 +50,24 @@ export default Body;
             </Form>*/
 
 
+/*<Nav.Item>
+                    <NavLink href="/about" >About</NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="/chatbot" >ChatBot</NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                    <NavLink href="/search" >Search</NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                    <NavLink href="/signin" >Sign In</NavLink>
+                </Nav.Item>
+                <Nav.Item>
+                    <NavLink href="/signup" >Sign Up</NavLink>
+                </Nav.Item>
+                
+                <header role="banner" class="NavMain-Banner-module--cls2--Kiz5E NavMain-Banner-module-cls1--2T6rT text-light justify-content-center navbar navbar-expand navbar-dar">
+                <div style={{marginTop: "50px"}}>
+                    WorldWide CoV19 Reopen Policy 
+                </div>
+            </header>*/

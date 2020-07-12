@@ -1,19 +1,9 @@
-
-.Title{
-    height: 120px;
+Header{
+    height: 100px;
+    display: inline-block;
+    padding: 20px;
+    font-size: 50px;
 }
-
-.nav-bar{
-    margin: auto;
-    height:20px;
-    text-align-last: center; 
-}
-
-.Introduction{
-    width: 90%;
-    height: 500px;
-}
-
 
 list-item{
     display: flex !important;
@@ -25,5 +15,9 @@ h1{
     text-align: center;
     position: relative;
     background-color: gray;
+}
+
+Router{
+    text-align: center;
 }
 
