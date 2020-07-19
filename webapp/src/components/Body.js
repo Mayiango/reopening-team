@@ -5,7 +5,7 @@ import SearchPage from './SearchPage';
 import Chatbox from './Chatbox';
 import ReactBootstrap, {Nav, Navbar, NavItem, selectKey, NavDropdown, MenuItem,  Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, Form, FormGroup, FormControl}  from 'react-bootstrap';
 
-import SignIn from './SignIn';
+import ValidateSignIn from './ValidateSignIn';
 import SignUp from './SignUp';
 import About from './About';
 
@@ -32,7 +32,7 @@ const Body = () =>{
                     Chatbox
                 </Route>
                 <Route path="/search" component={SearchPage} />
-                <Route path="/signin" component={SignIn} />
+                <Route path="/signin"><ValidateSignIn /></Route>
                 <Route path="/signup" component={SignUp} />
             </Switch>
         </Router>
