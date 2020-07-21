@@ -8,7 +8,7 @@ Created on Tue Jun 23 09:40:49 2020
 import re
 
 from bs4 import BeautifulSoup as bs
-soup = bs(open("National Reopen Guidelines Directory - Castlight health.html",encoding="utf8"), features="lxml")
+soup = bs(open("https://my.castlighthealth.com/covid-national-reopen-guidelines/",encoding="utf8"), features="lxml")
 
 
 td = soup.select('.menu')
