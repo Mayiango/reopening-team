@@ -1,10 +1,8 @@
 import React from 'react';
 import './Body.css';
-import {NavLink, BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import SearchPage from './SearchPage';
-import Chatbox from './Chatbox';
-import ReactBootstrap, {Nav, Navbar, NavItem, selectKey, NavDropdown, MenuItem,  Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, Form, FormGroup, FormControl}  from 'react-bootstrap';
-
+import  {Navbar }  from 'react-bootstrap';
 import ValidateSignIn from './ValidateSignIn';
 import SignUp from './SignUp';
 import About from './About';
@@ -14,15 +12,10 @@ const Body = () =>{
 
     return (    
         <Router>
-            <div className="Header" >
-                <h1 >
-                     WorldWide CoV19 Reopen Policy 
-                </h1>
-            </div>
+            
             <Navbar >
                 <Link to="" ></Link>
                 <Link to="/about"  style={{margin: '10px'}} >About </Link>
-                <Link to="/chatbot" style={{margin: '10px'}}>Chatbot</Link>
                 <Link to="/search" style={{margin: '10px'}}>Search</Link>
                 <Link to="/signin" style={{margin: '10px'}}>Sign In</Link>
                 <Link to="/signup" style={{margin: '10px'}}>Sign Up</Link>
@@ -30,13 +23,12 @@ const Body = () =>{
                 
             <Switch>
                 <Route path="/about" component={About } />
-                <Route path="/chatbox">
-                    Chatbox
-                </Route>
                 <Route path="/search" component={SearchPage} />
                 <Route path="/signin"><ValidateSignIn /></Route>
                 <Route path="/signup" component={SignUp} />
             </Switch>
+
+            
         </Router>
                   
     );
