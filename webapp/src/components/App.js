@@ -7,6 +7,7 @@ import Search from './Search';
 import { BrowserRouter,  Route } from 'react-router-dom';
 //import Header from './Header';
 import Body from './Body';
+import './App.css';
 
 //reference: https://reactrouter.com/web/example/basic
 
@@ -14,10 +15,6 @@ class App extends React.Component{
     state = {todos: [], selectItem: null};
 
     componentDidMount(){
-      /*api.get('/').then(res =>{
-        const todos = res.data;
-        this.setState({todos });
-      })*/
       this.onTermSubmit();
     }
    
@@ -41,7 +38,7 @@ class App extends React.Component{
           <div className="ui container" style={{marginTop: '10px'}}>
             <div className="Body"><Body /></div>
             <div className="footer">
-              <h6 className="footer">IBM Summer Project 2020</h6>
+              <h6 >IBM Summer Project 2020</h6>
             </div>
           </div>
         );

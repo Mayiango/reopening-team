@@ -8,18 +8,20 @@ import ReactBootstrap, {Nav, Navbar, NavItem, selectKey, NavDropdown, MenuItem, 
 import ValidateSignIn from './ValidateSignIn';
 import SignUp from './SignUp';
 import About from './About';
+import './Body.css';
 
 const Body = () =>{
 
     return (    
         <Router>
             <div className="Header" >
-                <h1 style={{padding: '40px'}}>
-                     WorldWide CoV19 Reopen Policy
+                <h1 >
+                     WorldWide CoV19 Reopen Policy 
                 </h1>
             </div>
             <Navbar >
-                <Link to="/about" style={{margin: '10px'}} >About </Link>
+                <Link to="" ></Link>
+                <Link to="/about"  style={{margin: '10px'}} >About </Link>
                 <Link to="/chatbot" style={{margin: '10px'}}>Chatbot</Link>
                 <Link to="/search" style={{margin: '10px'}}>Search</Link>
                 <Link to="/signin" style={{margin: '10px'}}>Sign In</Link>
@@ -27,7 +29,7 @@ const Body = () =>{
             </Navbar>
                 
             <Switch>
-                <Route path="/about" component={About }></Route>
+                <Route path="/about" component={About } />
                 <Route path="/chatbox">
                     Chatbox
                 </Route>
