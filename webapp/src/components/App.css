@@ -1,0 +1,26 @@
+div.corona{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+    width: 50%;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+div.footer{
+    position: absolute;
+    top: 80%;
+    bottom: 20%;
+}
+
+div.intro{
+    position: absolute;
+    margin-top: 50px;
+    text-align: left;
+    top: 40%;
+    font-size: 18px;
+    
+}

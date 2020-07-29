@@ -1,8 +1,7 @@
-Header{
-    height: 100px;
-    display: inline-block;
-    padding: 20px;
+div.Header{
+    height: 50px;
     font-size: 50px;
+    width: 100%;
 }
 
 list-item{
@@ -13,9 +12,9 @@ list-item{
 
 h1{
     text-align: center;
-    position: relative;
-    background-color: gray;
+    position: ab;
 }
+
 
 Router{
     text-align: center;
