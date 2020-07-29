@@ -1,12 +1,7 @@
 import React from 'react';
 import api from '../API/api';
-import SearchBar from './SearchBar';
-import ResultsList from './ResultsList';
-import ListDetail from './ListDetail';
-import Search from './Search';
-import { BrowserRouter,  Route } from 'react-router-dom';
-//import Header from './Header';
 import Body from './Body';
+import background from '../assets/background.jpg';
 import './App.css';
 
 //reference: https://reactrouter.com/web/example/basic
@@ -36,10 +31,15 @@ class App extends React.Component{
     render(){
         return (
           <div className="ui container" style={{marginTop: '10px'}}>
-            <div className="Body"><Body /></div>
-            <div className="footer">
-              <h6 >IBM Summer Project 2020</h6>
+            <div class="title" >
+              Worldwide CoV19 Reopen Policy 
+              <div>
+                <p style={{fontSize: '8px', textAlign: 'right'}} >source: "https://www.district4health.org/services/community-health/covid-19/"</p> 
             </div>
+            </div>
+            
+            <div class="body"><Body /></div>
+            
           </div>
         );
     }
